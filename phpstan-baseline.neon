@@ -521,6 +521,10 @@ parameters:
 			path: lib/Doctrine/ODM/MongoDB/Event/OnClearEventArgs.php
 
 		-
+			message: "#1 $cursor of method Doctrine\\\\ODM\\\\MongoDB\\\\Aggregation\\\\Aggregation\\:\\::prepareIterator\\(\\) expects Doctrine\\\\ODM\\\\MongoDB\\\\Iterator\\\\Iterator&MongoDB\\\\Driver\\\\CursorInterface, Traversable given\\.$#
+			count: 1
+			path: lib/Doctrine/ODM/MongoDB/Aggregation/Aggregation.php
+		-
 			message: "#^Parameter \\#1 \\$initializer of method ProxyManager\\\\Proxy\\\\GhostObjectInterface\\<object\\>\\:\\:setProxyInitializer\\(\\) expects \\(Closure\\(ProxyManager\\\\Proxy\\\\GhostObjectInterface\\<object\\>\\=, string\\=, array\\<string, mixed\\>\\=, Closure\\|null\\=, array\\<string, mixed\\>\\=\\)\\: bool\\)\\|null, Closure\\(ProxyManager\\\\Proxy\\\\GhostObjectInterface, string, array, mixed, array\\)\\: true given\\.$#"
 			count: 1
 			path: lib/Doctrine/ODM/MongoDB/Hydrator/HydratorFactory.php
