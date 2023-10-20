@@ -12,9 +12,11 @@ use Doctrine\ODM\MongoDB\Iterator\UnrewindableIterator;
 use Doctrine\ODM\MongoDB\Mapping\ClassMetadata;
 use IteratorAggregate;
 use MongoDB\Collection;
+use MongoDB\Driver\Cursor;
 use MongoDB\Driver\CursorInterface;
 
 use function array_merge;
+use function assert;
 
 /** @psalm-import-type PipelineExpression from Builder */
 final class Aggregation implements IteratorAggregate
@@ -34,6 +36,7 @@ final class Aggregation implements IteratorAggregate
         $options = array_merge($this->options, ['cursor' => true]);
 
         $cursor = $this->collection->aggregate($this->pipeline, $options);
+        assert($cursor instanceof Cursor);
 
         return $this->prepareIterator($cursor);
     }
