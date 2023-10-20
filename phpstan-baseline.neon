@@ -521,7 +521,7 @@ parameters:
 			path: lib/Doctrine/ODM/MongoDB/Event/OnClearEventArgs.php
 
 		-
-			message: "#1 $cursor of method Doctrine\\\\ODM\\\\MongoDB\\\\Aggregation\\\\Aggregation\\:\\::prepareIterator\\(\\) expects Doctrine\\\\ODM\\\\MongoDB\\\\Iterator\\\\Iterator&MongoDB\\\\Driver\\\\CursorInterface, Traversable given\\.$#"
+			message: "#^Parameter \\#1 \\$cursor of method Doctrine\\\\ODM\\\\MongoDB\\\\Aggregation\\\\Aggregation\\:\\::prepareIterator\\(\\) expects Doctrine\\\\ODM\\\\MongoDB\\\\Iterator\\\\Iterator&MongoDB\\\\Driver\\\\CursorInterface, Traversable given\\.$#"
 			count: 1
 			path: lib/Doctrine/ODM/MongoDB/Aggregation/Aggregation.php
 
